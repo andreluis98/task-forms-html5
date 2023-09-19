@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre sistena solar</title>
+</head>
+
+<body>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+    </script>
+    <header>
+        <h1>Quiz Sobre o sistema solar</h1>
+    </header>
+    <main>
+        <form action="#">
+            <h2>Pergunta 1</h2>
+            <p>Quantos planetas existem no sistema solar?</p>
+            <input type="radio" id="7" name="number" value="7">
+            <label for="7">7</label>
+            <input type="radio" id="8" name="number" value="8">
+            <label for="8">8</label>
+            <input type="radio" id="9" name="number" value="9">
+            <label for="9">9</label> 
+            <button>Enviar</button>
+        </form>
+        <form action="#">
+            <h2>Pergunta 2</h2>
+            <p>Quais destes são planetas gasosos? Selecione todas as opções corretas</p>
+            <input type="checkbox" id="7" name="name_planets" value="marte">
+            <label for="marte">Marte</label>
+            <input type="checkbox" id="8" name="name_planets" value="jupiter">
+            <label for="jupiter">Júpiter</label>
+            <input type="checkbox" id="9" name="name_planets" value="venus">
+            <label for="venus">Vênus</label> 
+            <button>Enviar</button>
+        </form>
+        <form action="#">
+            <h2>Pergunta 3</h2>
+            <p>Qual é a maior lua de Saturno?</p>
+            <select name="lua">
+                <option value="Iapetus">Iapetus</option>
+                <option value="Rhea">Rhea</option>
+                <option value="Tita">Titã</option>
+            </select>
+            <button>Enviar</button>
+        </form>
+        <form action="#">
+            <h2>Pergunta 4</h2>
+            <p>Em que ano a sonda Voyager 2 foi lançada para explorar os planetas do Sistema Solar?</p>
+            <input type="range" min="1900" max="2023" value="2000" oninput="rangeValue.innerText = this.value"><p id="rangeValue">2000</p><button>Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>
